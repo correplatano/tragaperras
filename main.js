@@ -36,6 +36,10 @@ function cobrar(mAcumuladas){
     alert("Has cobrado " + premio + " monedas")
     
 }
+// CUando quieras hacer git 
+// git add fichero, 
+// git commit -m "mesnage" 
+// git push origin master
 
 
 document.getElementById('echar').addEventListener("click", function(nMonedas){echarMonedas(this);}, false)
