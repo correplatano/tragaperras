@@ -1,41 +1,49 @@
-var listaImagenes = ["aubergine", "banana", "carrots", "cherries", "dollar", "lemon", "orange", "peach", "potato", "tomato"];
-var cantidadMonedas = document.getElementById("nMonedas");
-var caja = document.getElementById("mAcumuladas");
-var botonSalir = document.getElementById("salir");
-var botonEchar = document.getElementById("echar");
-var listaHistorial = document.getElementsByTagName("ul")[0];
+const listaImagenes = ["aubergine", "banana", "carrots", "cherries", "dollar", "lemon", "orange", "peach", "potato", "tomato"];
+const cantidadMonedas = document.getElementById("nMonedas");
+const cantidad = parseInt(cantidadMonedas.value);
+const caja = document.getElementById("mAcumuladas");
+const botonSalir = document.getElementById("salir");
+const botonEchar = document.getElementById("echar");
+const listaHistorial = document.getElementsByTagName("ul")[0];
 
 botonSalir.disabled=true;
 
+
 function echarMonedas(){
     
-    if (!isNaN(cantidadMonedas.value) && cantidadMonedas.value>0){
-        mAcumuladas.innerHTML = cantidadMonedas.value;
+    if (!isNaN(cantidad) && cantidad > 0){
+        mAcumuladas.innerHTML = cantidad;
         botonSalir.disabled=false;
         botonEchar.disabled=true;
         listaHistorial.innerHTML += "<ul>Has introducido " + cantidadMonedas.value + " monedas</ul>";
+        caja.innerHTML = cantidadMonedas.value;
 
     } else {
-        alert ("Introduce una cantidad válida. Has introducido " + cantidadMonedas + " monedas.");
+        alert ("Introduce una cantidad válida. Has introducido " + cantidadMonedas.value + " monedas.");
     }
 }
 
 function tirarPalanca(palanca){
     
-    if (mAcumuladas.innerHTML == 0){
+    let cajaAcumulada = parseInt(caja.innerHTML);
+
+    if (cajaAcumulada == 0){
+        debugger;
         alert("No tienes monedas para jugar");
         palanca.preventDefault();
+
     }else{         
         palanca.src="img/palancaDOWN.png";
     }
 }
 
 function cobrar(){
+    
     botonSalir.disabled=true;
     botonEchar.disabled=false;
     listaHistorial.innerHTML += "<ul>HAS GANADO " + caja.innerHTML + " MONEDAS</ul>";
     alert("Has cobrado " + caja.innerHTML + " monedas");
-    cantidadMonedas.value = caja.innerHTML; 
+    cantidadMonedas.value = caja.innerHTML;
     caja.innerHTML -= caja.innerHTML;
 }
 
