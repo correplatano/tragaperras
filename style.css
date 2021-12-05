@@ -1,8 +1,7 @@
-
-
-#mAcumuladas{
+#mAcumuladas{/*Damos estilo al elemento del HTML para que las monedas que tenemos en la máquina aparezcan de forma diferente al resto de elementos.*/
     font-style: italic;
     font: oblique bold 120% cursive;
     font-size: 50px;
     color:green;
+    
 }
