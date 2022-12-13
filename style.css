@@ -1,7 +1,29 @@
+body{background-image: url(img/fondo.webp); background-repeat: no-repeat; background-size: 100%; color:whitesmoke; font-weight: bolder;}
+
+h1{margin-left: 35%; font-style:italic; font-weight: bolder; font-size: 3em; color:greenyellow}
+
+.manejador{margin-left:2%}
+.cobrar{margin-left: 3%;}
+
 #mAcumuladas{/*Damos estilo al elemento del HTML para que las monedas que tenemos en la máquina aparezcan de forma diferente al resto de elementos.*/
     font-style: italic;
     font: oblique bold 120% cursive;
     font-size: 50px;
-    color:green;
-    
+    color:rgb(31, 209, 31);
+    margin-left: 5%;
 }
+
+
+#pantallas{margin-left:550px; margin-top:50px;}
+
+.pantallas{border: 10px solid blue; width:250px; height: 250px; display: inline-block;}
+
+.pantalla{width:250px; height: 250px; display:inline-block}
+
+.div-palanca{display: inline-block; width:250px; height: 250px;border: 12px solid black; margin-left:125px;}
+
+#palanca{width:250px; height: 250px;}
+
+.historial{margin-left:2%;}
+
+.premio{color:yellowgreen}

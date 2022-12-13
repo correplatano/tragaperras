@@ -145,11 +145,3 @@ document.getElementById('echar').addEventListener("click", echarMonedas, false);
 document.getElementById('palanca').addEventListener("mousedown", tirarPalanca, false); //Mientras tenemos presionado el botón del ratón, ejecutamos la función tirarPalanca.
 document.getElementById('palanca').addEventListener("mouseup", iniciarPartida, false); //Cuando soltamos el botón del ratón, ejecutamos la función iniciarPartida
 document.getElementById('salir').addEventListener("click", cobrar, false); //Si hacemos click en el botón salir, ejecutamos la función cobrar. 
-
-
-
-
-// CUando quieras hacer git 
-// git add fichero, 
-// git commit -m "mesnage" 
-// git push origin master
